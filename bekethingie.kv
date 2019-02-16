@@ -1,0 +1,22 @@
+#: import FadeTransition kivy.uix.screenmanager.FadeTransition
+ScreenManagement:
+    transition: FadeTransition()
+    MainScreen:
+<MainScreen>:
+	name:"main_screen"
+    id: ms
+    display: ms
+    Label:
+        font_size: 72
+        id:x
+        text: " "
+    Button:
+        text:"press me to start"
+        pos_hint:{"x":0.6,"y":0}
+        size_hint:0.4,0.2
+        on_release:
+            x.text += ms.writing()
+            ms.writing()
+
+
+        
